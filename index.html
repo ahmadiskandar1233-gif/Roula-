@@ -1,1 +1,37 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <link rel="stylesheet" href="styles.css">\n    <title>Valentine Question</title>\n    <style>\n        body {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n            background-color: #f8e0e0;\n        }\n        .container {\n            text-align: center;\n        }\n        .card {\n            background: white;\n            padding: 20px;\n            border-radius: 10px;\n            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n        }\n        .button-container {\n            margin-top: 20px;\n        }\n        button {\n            padding: 10px 20px;\n            font-size: 16px;\n            margin: 5px;\n            border: none;\n            border-radius: 5px;\n            cursor: pointer;\n        }\n        .yesBtn {\n            background-color: #ff6b81;\n            color: white;\n        }\n        .noBtn {\n            background-color: #6b8eff;\n            color: white;\n        }\n        .hearts {\n            display: none;\n            font-size: 2em;\n            margin-top: 20px;\n        }\n    </style>\n</head>\n<body>\n    <div class="container">\n        <div class="card">\n            <h1>Would you be my valentine?</h1>\n            <div class="button-container">\n                <button class="yesBtn">Yes</button>\n                <button class="noBtn">No</button>\n            </div>\n            <div class="hearts">❤️❤️❤️</div>\n        </div>\n    </div>\n    <script>\n        const noBtn = document.querySelector('.noBtn');\n        const yesBtn = document.querySelector('.yesBtn');\n        const hearts = document.querySelector('.hearts');\n\n        noBtn.addEventListener('click', () => {\n            yesBtn.style.transform = 'scale(1.5)';\n            hearts.style.display = 'block';\n        });\n    </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>💕 Valentine's Day Question 💕</h1>
+            <p class="question">Would you be my valentine?</p>
+            
+            <div class="button-container">
+                <button id="yesBtn" class="btn btn-yes">Yes! 💕</button>
+                <button id="noBtn" class="btn btn-no">No</button>
+            </div>
+        </div>
+        
+        <div id="celebration" class="celebration hidden">
+            <h2>🎉 Yay! Happy Valentine's Day! 🎉</h2>
+            <div class="hearts">
+                <span class="heart">💕</span>
+                <span class="heart">💖</span>
+                <span class="heart">💗</span>
+                <span class="heart">💓</span>
+                <span class="heart">💞</span>
+            </div>
+            <p>You made me the happiest! 🌹</p>
+            <button id="resetBtn" class="btn btn-reset">Ask Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
